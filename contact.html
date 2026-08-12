@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinout | Mouhamed Fall</title>
+    <meta name="description" content="Coordonnées de contact de Mouhamed Fall pour collaborations académiques et professionnelles." />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html">Mouhamed Fall</a>
+          <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Changer le thème">🌙</button>
+            <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <div class="nav-links" id="navLinks">
+              <a href="index.html">Accueil</a>
+              <a href="about.html">Parcours</a>
+              <a href="projects.html">Projets</a>
+              <a href="contact.html" aria-current="page">Pinout</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="container section reveal" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="eyebrow">Pinout</p>
+          <h1 id="contact-title">Coordonnées de contact et accès à la documentation professionnelle.</h1>
+        </div>
+        <div class="card contact-card">
+          <p>Pour des collaborations académiques, industrielles ou de recherche, je reste joignable via les canaux suivants.</p>
+          <div class="contact-list">
+            <a class="btn btn-primary" href="mailto:mohamed.fall@uit.ac.ma">mohamed.fall@uit.ac.ma</a>
+            <a class="btn" href="tel:+212691452512">+212 691 452 512</a>
+            <a class="btn" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+          <div class="contact-meta">
+            <p><strong>Localisation :</strong> Grenoble, France</p>
+            <p><strong>Langues :</strong> Français · Anglais · Wolof</p>
+            <p><strong>Centres d’intérêt :</strong> Microélectronique · IA embarquée · Industrie 4.0 · Aéronautique · Automobile</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container"><p>© <span id="year"></span> Mouhamed Fall</p></div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

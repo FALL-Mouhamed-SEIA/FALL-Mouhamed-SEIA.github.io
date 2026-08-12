@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcours | Mouhamed Fall</title>
+    <meta name="description" content="Parcours académique et compétences techniques de Mouhamed Fall en systèmes embarqués et microélectronique." />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html">Mouhamed Fall</a>
+          <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Changer le thème">🌙</button>
+            <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <div class="nav-links" id="navLinks">
+              <a href="index.html">Accueil</a>
+              <a href="about.html" aria-current="page">Parcours</a>
+              <a href="projects.html">Projets</a>
+              <a href="contact.html">Pinout</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="container section reveal" aria-labelledby="education-title">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h1 id="education-title">Parcours académique et objectifs de longue durée.</h1>
+        </div>
+        <div class="grid grid-2">
+          <article class="card">
+            <h2 class="sub-title">Formation</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <strong>2026–2028 · Master EEA / MISTRE</strong>
+                <p>Université Grenoble Alpes — parcours Microélectronique, Intégration des Systèmes Temps Réel Embarqués. Boursier Graduate School SUMMIT.</p>
+              </div>
+              <div class="timeline-item">
+                <strong>2025–2026 · Cycle ingénieur</strong>
+                <p>ENSA Kénitra — option Systèmes embarqués & intelligence artificielle.</p>
+              </div>
+              <div class="timeline-item">
+                <strong>2024–2025 · Licence ST</strong>
+                <p>Génie électrique et informatique industrielle, FST Mohammedia — Mention Bien, Major de promotion.</p>
+              </div>
+              <div class="timeline-item">
+                <strong>2022–2024 · DEUST</strong>
+                <p>Mathématiques, informatique et physique — Mention Bien, rang 8/534.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2 class="sub-title">Compétences techniques</h2>
+            <div class="list">
+              <div class="item">
+                <strong>Systèmes embarqués</strong>
+                <p>Conception et développement de firmware en C/C++, Embedded C et programmation logicielle temps réel avec FreeRTOS. Expérience sur STM32, PIC18, Raspberry Pi, ESP32, Arduino, Linux embarqué et architecture de systèmes critiques.</p>
+              </div>
+              <div class="item">
+                <strong>Microélectronique & électronique</strong>
+                <p>Analyse et conception de circuits électroniques analogiques et numériques, modélisation de composants, étude de MOSFET, régimes transitoires, conception de capteurs et interfaces. Utilisation de KiCad, OrCAD et PSpice pour la simulation et la validation.</p>
+              </div>
+              <div class="item">
+                <strong>Protocoles, IA et outils</strong>
+                <p>Maîtrise des bus SPI, I2C, UART, CAN, USB HID/CDC, MQTT, réglages d’interfaces matérielles, acquisition de données et intégration d’algorithmes IA embarqués. Outils : MATLAB, Simulink, LabVIEW, Git/GitHub, Linux, automatisation de test et instrumentation.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container"><p>© <span id="year"></span> Mouhamed Fall</p></div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouhamed Fall | Portfolio ingénieur systèmes embarqués & microélectronique</title>
+    <meta name="description" content="Portfolio personnel de Mouhamed Fall, ingénieur en systèmes embarqués, microélectronique et IA embarquée." />
+    <meta name="keywords" content="systèmes embarqués, microélectronique, IA embarquée, R&D, embedded, Grenoble" />
+    <meta property="og:title" content="Mouhamed Fall | Portfolio ingénieur" />
+    <meta property="og:description" content="Portfolio technique et scientifique de Mouhamed Fall." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="apple-touch-icon" href="favicon/icon-192.png" />
+    <link rel="icon" href="favicon/icon-192.png" type="image/png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html">Mouhamed Fall</a>
+          <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Changer le thème">🌙</button>
+            <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <div class="nav-links" id="navLinks">
+              <a href="index.html" aria-current="page">Accueil</a>
+              <a href="about.html">Parcours</a>
+              <a href="projects.html">Projets</a>
+              <a href="contact.html">Pinout</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="container hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="hero-badge">Systèmes embarqués · Microélectronique · IA embarquée</p>
+          <h1 id="hero-title">Concepteur de systèmes embarqués intelligents et de solutions microélectroniques pour l'IA de demain.</h1>
+          <p>
+            Je développe des solutions électroniques et embarquées orientées recherche, avec un intérêt fort pour les architectures matérielles neuromorphiques, les systèmes temps réel et l’IA à faible consommation.
+          </p>
+          <div class="hero-actions" aria-label="Actions principales">
+            <a class="btn btn-primary" href="projects.html">Explorer les modules</a>
+            <a class="btn" href="contact.html">Consulter le pinout</a>
+          </div>
+          <span class="signal-trace" aria-hidden="true"></span>
+        </div>
+
+        <aside class="card profile-card" aria-label="Présentation personnelle">
+          <img class="profile-photo" src="assets/images/ma-photo.jpg" alt="Portrait de Mouhamed Fall" />
+          <h2>Mouhamed Fall</h2>
+          <p class="mono">Master EEA · MISTRE · Université Grenoble Alpes</p>
+          <p class="profile-meta">13 mars 2004 · Sénégalais · Grenoble, France</p>
+        </aside>
+      </section>
+
+      <section class="container section reveal" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2 id="overview-title">Une trajectoire technique orientée R&amp;D, instrumentation et innovation embarquée.</h2>
+        </div>
+        <div class="grid grid-2">
+          <article class="card">
+            <p>
+              Mon parcours mêle électronique, systèmes embarqués, automatisme, microélectronique et intelligence artificielle. Je cherche à construire des systèmes robustes, compacts et performants pour des usages industriels et scientifiques.
+            </p>
+          </article>
+          <article class="card">
+            <p>
+              Mon objectif à long terme est d’intégrer un doctorat au CEA-Leti et de contribuer à des architectures matérielles avancées pour l’IA embarquée au sein de STMicroelectronics ou du CEA Tech.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Mouhamed Fall — Portfolio personnel</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

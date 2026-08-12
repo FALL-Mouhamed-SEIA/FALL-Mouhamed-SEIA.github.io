@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules | Mouhamed Fall</title>
+    <meta name="description" content="Projets techniques de Mouhamed Fall : instrumentation temps réel, caractérisation CMOS, IoT distribué et télémétrie." />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html">Mouhamed Fall</a>
+          <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Changer le thème">🌙</button>
+            <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <div class="nav-links" id="navLinks">
+              <a href="index.html">Accueil</a>
+              <a href="about.html">Parcours</a>
+              <a href="projects.html" aria-current="page">Projets</a>
+              <a href="contact.html">Pinout</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="container section reveal" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projets</p>
+          <h1 id="projects-title">Projets présentés comme des modules techniques et fonctionnels.</h1>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card item">
+            <h2>Instrumentation virtuelle temps réel</h2>
+            <p>Carte électronique PIC18F4550, interface USB HID en Embedded C et supervision LabVIEW pour un système de pilotage et de supervision en temps réel.</p>
+            <span class="tag">USB HID · LabVIEW · Embedded C</span>
+          </article>
+
+          <article class="card item">
+            <h2>Caractérisation de cellules CMOS</h2>
+            <p>Étude de VTC, NMH, NML et dimensionnement logique CMOS à l’aide d’OrCAD Capture et PSpice.</p>
+            <span class="tag">CMOS · MOSFET · PSpice</span>
+          </article>
+
+          <article class="card item">
+            <h2>Architecture IoT distribuée</h2>
+            <p>Passerelle Raspberry Pi, modules ESP32, communication MQTT et collecte de données via Node-RED et InfluxDB.</p>
+            <span class="tag">MQTT · Edge Computing · IoT</span>
+          </article>
+
+          <article class="card item">
+            <h2>Télémétrie satellite</h2>
+            <p>Simulation MATLAB/Simulink d’une chaîne FSK et analyse BER pour un traitement du signal orienté communication.</p>
+            <span class="tag">MATLAB · Simulink · DSP</span>
+          </article>
+
+          <article class="card item">
+            <h2>Serre connectée intelligente</h2>
+            <p>Réseau Raspberry Pi/ESP32/Arduino pour la supervision de capteurs et la prédiction de température, CO₂ et pH via un modèle LSTM.</p>
+            <span class="tag">IA embarquée · Grafana · InfluxDB</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container"><p>© <span id="year"></span> Mouhamed Fall</p></div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

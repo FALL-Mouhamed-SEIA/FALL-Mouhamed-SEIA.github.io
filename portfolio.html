@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Mouhamed Fall</title>
+    <meta name="description" content="Portfolio personnel de Mouhamed Fall, ingénieur en systèmes embarqués et microélectronique" />
+    <style>
+      :root {
+        --bg: #07111f;
+        --bg-soft: #101c31;
+        --card: rgba(255, 255, 255, 0.08);
+        --text: #f3f6fb;
+        --muted: #9eb0c8;
+        --accent: #7c83ff;
+        --accent-2: #34d1bf;
+        --border: rgba(255, 255, 255, 0.14);
+        --shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      body[data-theme="light"] {
+        --bg: #f5f7ff;
+        --bg-soft: #ffffff;
+        --card: rgba(255, 255, 255, 0.9);
+        --text: #122033;
+        --muted: #5d6b7f;
+        --accent: #5b6cff;
+        --accent-2: #16b8a3;
+        --border: rgba(18, 32, 51, 0.1);
+        --shadow: 0 10px 35px rgba(18, 32, 51, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, rgba(7, 17, 31, 0.95), rgba(16, 28, 49, 0.95)),
+          url("https://www.baesystems.com/dam/jcr:2886f49e-002b-4bf1-babc-f0800ca4f5e0") center/cover fixed;
+        color: var(--text);
+        line-height: 1.6;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+
+      body[data-theme="light"] {
+        background: linear-gradient(135deg, rgba(245, 247, 255, 0.95), rgba(255, 255, 255, 0.95)),
+          url("https://www.baesystems.com/dam/jcr:2886f49e-002b-4bf1-babc-f0800ca4f5e0") center/cover fixed;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        background: rgba(7, 17, 31, 0.7);
+        border-bottom: 1px solid var(--border);
+      }
+
+      body[data-theme="light"] header {
+        background: rgba(245, 247, 255, 0.8);
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        gap: 1rem;
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.95rem;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.2rem;
+        color: var(--muted);
+      }
+
+      .nav-links a:hover {
+        color: var(--text);
+      }
+
+      .theme-toggle,
+      .menu-toggle {
+        border: 1px solid var(--border);
+        background: var(--card);
+        color: var(--text);
+        border-radius: 999px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .hero {
+        padding: 5rem 0 4rem;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 4vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 1.05rem;
+        max-width: 640px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.6rem;
+      }
+
+      .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.4rem;
+      }
+
+      .stat {
+        min-width: 130px;
+        padding: 0.8rem 1rem;
+        border-radius: 14px;
+        background: var(--card);
+        border: 1px solid var(--border);
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.1rem;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .hero-badge {
+        color: #8fe8d8;
+        font-weight: 600;
+        margin-bottom: 0.6rem;
+      }
+
+      .hero-card-text {
+        color: var(--muted);
+        margin-top: 0.5rem;
+      }
+
+      .contact-actions {
+        margin-top: 1rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.9rem 1.2rem;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: white;
+      }
+
+      .btn-secondary {
+        background: var(--card);
+        border: 1px solid var(--border);
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+
+      .hero-card {
+        padding: 2rem;
+      }
+
+      .hero-card .avatar {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 2rem;
+        background: linear-gradient(135deg, rgba(124, 131, 255, 0.25), rgba(52, 209, 191, 0.25));
+        margin-bottom: 1rem;
+      }
+
+      .hero-card ul {
+        list-style: none;
+        margin-top: 1rem;
+        color: var(--muted);
+      }
+
+      .hero-card li {
+        margin: 0.45rem 0;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin: 1rem 0 0.5rem;
+      }
+
+      .image-card {
+        overflow: hidden;
+        padding: 0;
+      }
+
+      .image-card img {
+        width: 100%;
+        height: 220px;
+        display: block;
+        object-fit: cover;
+      }
+
+      .image-caption {
+        padding: 1rem 1rem 1.2rem;
+      }
+
+      .image-caption h3 {
+        margin-bottom: 0.35rem;
+      }
+
+      .image-caption p {
+        color: var(--muted);
+      }
+
+      section {
+        padding: 2rem 0 1rem;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+
+      .grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .project-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .item {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 1.15rem;
+      }
+
+      .item h3 {
+        margin-bottom: 0.4rem;
+      }
+
+      .item p {
+        color: var(--muted);
+      }
+
+      .tag {
+        display: inline-block;
+        margin-top: 0.7rem;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(124, 131, 255, 0.16);
+        color: #dfe3ff;
+        font-size: 0.82rem;
+      }
+
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        z-index: 30;
+      }
+
+      footer {
+        padding: 2rem 0 3rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .grid-2,
+        .project-list,
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          align-items: flex-start;
+          flex-wrap: wrap;
+        }
+
+        .nav-actions {
+          width: 100%;
+          justify-content: flex-end;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .nav-links {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          padding: 0.8rem 0 0;
+          gap: 0.7rem;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .hero {
+          padding-top: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-bar" id="progressBar"></div>
+    <header>
+      <div class="container">
+        <nav>
+          <a class="brand" href="#home">Mouhamed Fall</a>
+          <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">🌙</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <div class="nav-links" id="navLinks">
+              <a href="#about">À propos</a>
+              <a href="#skills">Compétences</a>
+              <a href="#projects">Projets</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="container hero">
+        <div>
+          <p class="hero-badge">Ingénieur en systèmes embarqués & microélectronique</p>
+          <h1>Je conçois des solutions électroniques et embarquées, de la recherche à l'implémentation.</h1>
+          <p>
+            Ingénieur en formation à Grenoble, je développe un profil orienté systèmes embarqués,
+            microélectronique et IA neuromorphique. Je cherche à contribuer à des projets de recherche et développement à forte valeur technologique.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Voir mes projets</a>
+            <a class="btn btn-secondary" href="#contact">Me contacter</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>2026–2028</strong>
+              <span>Master EEA / MISTRE</span>
+            </div>
+            <div class="stat">
+              <strong>2025–2026</strong>
+              <span>Cycle ingénieur ENSA</span>
+            </div>
+            <div class="stat">
+              <strong>IA neuromorphique</strong>
+              <span>orientation future</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card hero-card">
+          <div class="avatar">👋</div>
+          <h2>Bonjour, je suis Mouhamed Fall</h2>
+          <p class="hero-card-text">
+            Né le 13/03/2004, de nationalité sénégalaise, actuellement basé à Grenoble, France.
+          </p>
+          <ul>
+            <li>• Systèmes embarqués et temps réel</li>
+            <li>• Microélectronique et conception analogique</li>
+            <li>• IA, électronique et innovation technologique</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="image-grid">
+          <div class="card image-card">
+            <img
+              src="https://www.baesystems.com/dam/jcr:2886f49e-002b-4bf1-babc-f0800ca4f5e0"
+              alt="Illustration de microélectronique"
+              loading="lazy"
+            />
+            <div class="image-caption">
+              <h3>Microélectronique</h3>
+              <p>Circuits intégrés, conception de composants et analyse de performances.</p>
+            </div>
+          </div>
+
+          <div class="card image-card">
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+              alt="Illustration de systèmes embarqués"
+              loading="lazy"
+            />
+            <div class="image-caption">
+              <h3>Systèmes embarqués</h3>
+              <p>Capteurs, cartes électroniques, temps réel et connectivité IoT.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container">
+        <h2 class="section-title">À propos</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <p>
+              Je suis actuellement en Master EEA, parcours MISTRE à l’Université Grenoble Alpes,
+              avec une forte orientation vers la microélectronique, les systèmes embarqués et l’intégration de solutions temps réel.
+            </p>
+          </div>
+          <div class="card">
+            <p>
+              Mon objectif est de poursuivre vers la microélectronique neuromorphique pour l’IA,
+              puis d’envisager un doctorat au CEA-Leti et une carrière R&amp;D chez STMicroelectronics ou CEA Tech.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="container">
+        <h2 class="section-title">Compétences techniques</h2>
+        <div class="grid grid-3">
+          <div class="item">
+            <h3>Systèmes embarqués</h3>
+            <p>C/C++, Embedded C, Python, FreeRTOS, STM32, FPGA (VHDL), Linux embarqué.</p>
+            <span class="tag">Embedded</span>
+          </div>
+          <div class="item">
+            <h3>Microélectronique</h3>
+            <p>MOSFET, circuits analogiques et mixtes, OrCAD/PSpice, Proteus ISIS, KiCad.</p>
+            <span class="tag">Analogique</span>
+          </div>
+          <div class="item">
+            <h3>Protocoles & outils</h3>
+            <p>SPI, I2C, UART, CAN, USB, MQTT, MATLAB/Simulink, Git/GitHub, VS Code.</p>
+            <span class="tag">IoT</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="container">
+        <h2 class="section-title">Projets techniques</h2>
+        <div class="project-list">
+          <article class="item">
+            <h3>Instrumentation virtuelle & pilotage temps réel</h3>
+            <p>Carte électronique basée sur PIC18F4550, pile USB HID en Embedded C et supervision LabVIEW.</p>
+            <span class="tag">PFE</span>
+          </article>
+          <article class="item">
+            <h3>Caractérisation de cellules CMOS</h3>
+            <p>Analyse VTC, marges de bruit, dimensionnement sous OrCAD/PSpice pour circuits logiques et alimentations.</p>
+            <span class="tag">Microélectronique</span>
+          </article>
+          <article class="item">
+            <h3>Architecture IoT distribuée</h3>
+            <p>Passerelle Raspberry Pi avec nœuds ESP32, edge computing prédictif et monitoring MQTT/InfluxDB/Node-RED.</p>
+            <span class="tag">IoT</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="card">
+          <p>
+            Je suis à la recherche de collaborations académiques et industrielles autour des systèmes embarqués, de l’électronique et de la microélectronique.
+          </p>
+          <div class="hero-actions contact-actions">
+            <a class="btn btn-primary" href="mailto:mohamed.fall@uit.ac.ma">Envoyer un email</a>
+            <a class="btn btn-secondary" href="tel:+212691452512">Téléphoner</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Mouhamed Fall — Portfolio personnel</p>
+      </div>
+    </footer>
+
+    <script>
+      const year = document.getElementById("year");
+      const progressBar = document.getElementById("progressBar");
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      const themeToggle = document.getElementById("themeToggle");
+      const body = document.body;
+
+      year.textContent = new Date().getFullYear();
+
+      const updateProgress = () => {
+        const scrollTop = window.scrollY;
+        const height = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = height > 0 ? (scrollTop / height) * 100 : 0;
+        progressBar.style.width = `${progress}%`;
+      };
+
+      window.addEventListener("scroll", updateProgress);
+      window.addEventListener("load", updateProgress);
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        body.setAttribute("data-theme", "light");
+        themeToggle.textContent = "☀️";
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = body.getAttribute("data-theme") === "light" ? "light" : "dark";
+        const nextTheme = currentTheme === "light" ? "dark" : "light";
+        body.setAttribute("data-theme", nextTheme);
+        localStorage.setItem("theme", nextTheme);
+        themeToggle.textContent = nextTheme === "light" ? "☀️" : "🌙";
+      });
+    </script>
+  </body>
+</html>

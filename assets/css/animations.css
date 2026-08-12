@@ -1,0 +1,31 @@
+@keyframes scan {
+  100% { transform: translateX(100%); }
+}
+
+@keyframes trace {
+  from { transform: translateX(-20%); }
+  to { transform: translateX(20%); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.terminal-cursor::after {
+  content: "_";
+  display: inline-block;
+  margin-left: 0.25rem;
+  animation: blink 1s infinite;
+}
