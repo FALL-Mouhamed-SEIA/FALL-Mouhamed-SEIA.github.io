@@ -55,10 +55,50 @@
         </div>
 
         <div class="project-gallery">
-          <img src="assets/images/IoT/WhatsApp%20Image%202026-08-13%20at%2012.37.42.jpeg" alt="Signal satellite et communication" />
-          <video controls muted playsinline poster="assets/images/IoT/WhatsApp%20Image%202026-08-13%20at%2012.37.42.jpeg">
-            <source src="assets/images/IoT/WhatsApp%20Video%202026-08-13%20at%2012.40.05.mp4" type="video/mp4" />
-          </video>
+          <img src="https://images.pexels.com/photos/14938295/pexels-photo-14938295.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Tour de communication et transmission du signal" />
+          <img src="https://images.pexels.com/photos/9990878/pexels-photo-9990878.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Grande antenne satellite pour communication" />
+          <img src="https://images.pexels.com/photos/5790645/pexels-photo-5790645.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Antenne satellite dans le paysage" />
+          <img src="https://images.pexels.com/photos/586056/pexels-photo-586056.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Satellite en orbite et télémétrie" />
+        </div>
+
+        <div class="card" style="margin: 1.5rem 0; padding: 1.25rem; border-radius: 18px;">
+          <h2>Simulation MATLAB/Simulink</h2>
+          <svg viewBox="0 0 900 260" role="img" aria-label="Simulation MATLAB Simulink de télémétrie satellite" style="width: 100%; height: auto; border-radius: 14px; background: linear-gradient(135deg, rgba(18,32,44,0.95), rgba(15,23,42,0.9)); border: 1px solid var(--border);">
+            <defs>
+              <linearGradient id="flow" x1="0" x2="1">
+                <stop offset="0%" stop-color="#7dd3fc"/>
+                <stop offset="100%" stop-color="#38bdf8"/>
+              </linearGradient>
+            </defs>
+            <rect x="20" y="20" width="120" height="70" rx="12" fill="#0f172a" stroke="#7dd3fc" stroke-width="2"/>
+            <text x="80" y="58" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Segoe UI, sans-serif">Source</text>
+            <text x="80" y="78" text-anchor="middle" fill="#7dd3fc" font-size="15" font-family="Segoe UI, sans-serif">FSK</text>
+
+            <rect x="200" y="20" width="140" height="70" rx="12" fill="#0f172a" stroke="#7dd3fc" stroke-width="2"/>
+            <text x="270" y="58" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Segoe UI, sans-serif">Modulateur</text>
+
+            <rect x="410" y="20" width="150" height="70" rx="12" fill="#0f172a" stroke="#7dd3fc" stroke-width="2"/>
+            <text x="485" y="58" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Segoe UI, sans-serif">Canal</text>
+            <text x="485" y="79" text-anchor="middle" fill="#7dd3fc" font-size="15" font-family="Segoe UI, sans-serif">Bruit + atténuation</text>
+
+            <rect x="620" y="20" width="160" height="70" rx="12" fill="#0f172a" stroke="#7dd3fc" stroke-width="2"/>
+            <text x="700" y="58" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Segoe UI, sans-serif">Démodulateur</text>
+
+            <path d="M140 55 H200" stroke="url(#flow)" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M340 55 H410" stroke="url(#flow)" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M560 55 H620" stroke="url(#flow)" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+            <rect x="100" y="130" width="240" height="90" rx="12" fill="#111827" stroke="#34d399" stroke-width="2"/>
+            <text x="220" y="165" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Segoe UI, sans-serif">Constellation</text>
+            <text x="220" y="190" text-anchor="middle" fill="#34d399" font-size="15" font-family="Segoe UI, sans-serif">Analyse BER / Eb/N0</text>
+
+            <rect x="420" y="130" width="240" height="90" rx="12" fill="#111827" stroke="#fbbf24" stroke-width="2"/>
+            <text x="540" y="165" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Segoe UI, sans-serif">Scope</text>
+            <text x="540" y="190" text-anchor="middle" fill="#fbbf24" font-size="15" font-family="Segoe UI, sans-serif">Signal + bruit</text>
+
+            <path d="M340 175 H420" stroke="#f59e0b" stroke-width="4" fill="none" stroke-dasharray="8 6"/>
+            <path d="M660 175 H780" stroke="#34d399" stroke-width="4" fill="none" stroke-dasharray="8 6"/>
+          </svg>
         </div>
 
         <div class="project-content">
