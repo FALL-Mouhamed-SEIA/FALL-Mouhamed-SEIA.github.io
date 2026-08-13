@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caractérisation CMOS | Mouhamed Fall</title>
+    <meta name="description" content="Projet de caractérisation de cellules CMOS, étude de VTC, NMH, NML et simulation sous OrCAD Capture et PSpice." />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html">Mouhamed Fall</a>
+          <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Changer le thème">🌙</button>
+            <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <div class="nav-links" id="navLinks">
+              <a href="index.html">Accueil</a>
+              <a href="about.html">Parcours</a>
+              <a href="projects.html" aria-current="page">Projets</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="container section reveal project-detail">
+        <div class="back-link">
+          <a class="btn" href="projects.html">← Retour aux projets</a>
+        </div>
+
+        <div class="project-hero">
+          <div class="card">
+            <p class="eyebrow">Projet technique</p>
+            <h1>Caractérisation de cellules CMOS</h1>
+            <p>
+              Étude des performances électriques de cellules CMOS, avec analyse des courbes VTC et des marges de bruit,
+              suivi d’un dimensionnement logique orienté robustesse et fiabilité.
+            </p>
+          </div>
+
+          <aside class="card project-meta">
+            <div class="project-metric"><strong>Catégorie</strong><span>Microélectronique</span></div>
+            <div class="project-metric"><strong>Technologies</strong><span>CMOS · MOSFET · OrCAD · PSpice</span></div>
+            <div class="project-metric"><strong>Objectif</strong><span>Analyse et modélisation de structures logiques</span></div>
+          </aside>
+        </div>
+
+        <div class="project-gallery">
+          <img src="assets/images/cmos/WhatsApp%20Image%202026-08-13%20at%2011.34.19.jpeg" alt="Circuit CMOS et analyse de caractérisation" />
+          <img src="assets/images/cmos/WhatsApp%20Image%202026-08-13%20at%2011.34.19%20(1).jpeg" alt="Détail de mesures CMOS" />
+          <img src="assets/images/cmos/WhatsApp%20Image%202026-08-13%20at%2011.34.19%20(2).jpeg" alt="Modélisation logique CMOS" />
+          <img src="assets/images/cmos/WhatsApp%20Image%202026-08-13%20at%2011.37.39.jpeg" alt="Caractérisation de cellules CMOS" />
+        </div>
+
+        <div class="project-content">
+          <article class="card">
+            <h2>Analyse effectuée</h2>
+            <p>
+              Le projet a consisté à étudier les caractéristiques statiques et dynamiques d’un système CMOS, avec une attention
+              particulière sur la stabilité en tension, les seuils de commutation et la robustesse fonctionnelle.
+            </p>
+            <p>
+              Les résultats ont permis de mieux comprendre le comportement des cellules lors de variations de tension, de charge
+              et d’environnement, tout en validant des hypothèses de conception par simulation.
+            </p>
+          </article>
+
+          <aside class="card">
+            <h2>Stack technique</h2>
+            <div class="project-stack">
+              <span>VTC</span>
+              <span>NMH</span>
+              <span>NML</span>
+              <span>CMOS</span>
+              <span>PSpice</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container"><p>© <span id="year"></span> Mouhamed Fall</p></div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

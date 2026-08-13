@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet détaillé | Mouhamed Fall</title>
+    <meta name="description" content="Détails d’un projet technique de Mouhamed Fall : architecture, objectifs, résultats et outils." />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html">Mouhamed Fall</a>
+          <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Changer le thème">🌙</button>
+            <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <div class="nav-links" id="navLinks">
+              <a href="index.html">Accueil</a>
+              <a href="about.html">Parcours</a>
+              <a href="projects.html" aria-current="page">Projets</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="container section reveal project-detail">
+        <div class="back-link">
+          <a class="btn" href="projects.html">← Retour aux projets</a>
+        </div>
+
+        <div class="project-hero">
+          <div class="card">
+            <p class="eyebrow">Projet technique</p>
+            <h1>Instrumentation virtuelle temps réel</h1>
+            <p>
+              Une plateforme de supervision et de contrôle temps réel conçue autour d’une carte électronique PIC18F4550,
+              d’une interface USB HID et d’un environnement LabVIEW pour l’acquisition, le pilotage et l’analyse des données.
+            </p>
+          </div>
+
+          <aside class="card project-meta">
+            <div class="project-metric">
+              <strong>Catégorie</strong>
+              <span>Instrumentation embarquée</span>
+            </div>
+            <div class="project-metric">
+              <strong>Technologies</strong>
+              <span>Embedded C, LabVIEW, USB HID</span>
+            </div>
+            <div class="project-metric">
+              <strong>Objectif</strong>
+              <span>Supervision robuste en temps réel</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="project-gallery">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Carte électronique" />
+          <video controls muted playsinline poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80">
+            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="project-content">
+          <article class="card">
+            <h2>Contexte et solution</h2>
+            <p>
+              Ce projet a consisté à concevoir une interface de pilotage et de mesure pour un système embarqué,
+              avec une communication fiable entre la carte électronique et une application de supervision.
+              L’objectif était de rendre le système réactif, stable et facile à exploiter pour des tests en environnement réel.
+            </p>
+            <p>
+              La solution a combiné la puissance du firmware embarqué avec un environnement de supervision visuel,
+              permettant la gestion des entrées/sorties, les mesures en temps réel et la validation des conditions opératoires.
+            </p>
+          </article>
+
+          <aside class="card">
+            <h2>Stack technique</h2>
+            <div class="project-stack">
+              <span>Embedded C</span>
+              <span>PIC18F4550</span>
+              <span>USB HID</span>
+              <span>LabVIEW</span>
+              <span>Mesures temps réel</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container"><p>© <span id="year"></span> Mouhamed Fall</p></div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

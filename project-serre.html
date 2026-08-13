@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serre connectée intelligente | Mouhamed Fall</title>
+    <meta name="description" content="Projet de serre connectée intelligente avec capteurs, Raspberry Pi, Arduino, Graphana et IA embarquée pour la prédiction environnementale." />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+    <header>
+      <div class="container">
+        <nav aria-label="Navigation principale">
+          <a class="brand" href="index.html">Mouhamed Fall</a>
+          <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Changer le thème">🌙</button>
+            <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+            <div class="nav-links" id="navLinks">
+              <a href="index.html">Accueil</a>
+              <a href="about.html">Parcours</a>
+              <a href="projects.html" aria-current="page">Projets</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="container section reveal project-detail">
+        <div class="back-link">
+          <a class="btn" href="projects.html">← Retour aux projets</a>
+        </div>
+
+        <div class="project-hero">
+          <div class="card">
+            <p class="eyebrow">Projet technique</p>
+            <h1>Serre connectée intelligente</h1>
+            <p>
+              Système de surveillance environnementale et d’assistance à la décision basé sur des capteurs, une architecture IoT
+              et un modèle prédictif appliqué aux paramètres climatiques d’une serre.
+            </p>
+          </div>
+
+          <aside class="card project-meta">
+            <div class="project-metric"><strong>Catégorie</strong><span>IA embarquée & agriculture numérique</span></div>
+            <div class="project-metric"><strong>Technologies</strong><span>Raspberry Pi · Arduino · Grafana · LSTM</span></div>
+            <div class="project-metric"><strong>Objectif</strong><span>Optimisation de conditions agronomiques</span></div>
+          </aside>
+        </div>
+
+        <div class="project-gallery">
+          <img src="assets/images/projects/serre.jpg" alt="Serre connectée et agriculture intelligente" />
+          <video controls muted playsinline poster="assets/images/projects/serre.jpg">
+            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="project-content">
+          <article class="card">
+            <h2>Mission</h2>
+            <p>
+              Ce projet visait à surveiller en continu les conditions de culture afin d’améliorer la qualité de production,
+              prévenir les écarts environnementaux et anticiper les fluctuations à partir de signaux capteurs.
+            </p>
+            <p>
+              En associant les outils de collecte de données, la visualisation en temps réel et la modélisation prédictive,
+              la solution offre un cadre pertinent pour un suivi intelligent et une meilleure décision opérationnelle.
+            </p>
+          </article>
+
+          <aside class="card">
+            <h2>Stack technique</h2>
+            <div class="project-stack">
+              <span>Capteurs</span>
+              <span>Arduino</span>
+              <span>Raspberry Pi</span>
+              <span>Grafana</span>
+              <span>IA embarquée</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container"><p>© <span id="year"></span> Mouhamed Fall</p></div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
