@@ -12,6 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (progressBar) progressBar.style.width = `${progress}%`;
   };
 
+  const applyTheme = (theme) => {
+    body.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (themeToggle) {
+      themeToggle.textContent = theme === 'light' ? '☀️' : '🌙';
+    }
+  };
+
+  const initTheme = () => {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    const initialTheme = savedTheme || (prefersLight ? 'light' : 'dark');
+    applyTheme(initialTheme);
+  };
+
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('load', updateProgress);
 
@@ -23,16 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => navLinks?.classList.remove('active'));
   });
 
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    body.setAttribute('data-theme', 'light');
-    if (themeToggle) themeToggle.textContent = '☀️';
-  }
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 640 && navLinks) {
+      navLinks.classList.remove('active');
+    }
+  });
+
+  initTheme();
 
   themeToggle?.addEventListener('click', () => {
     const nextTheme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-    body.setAttribute('data-theme', nextTheme);
-    localStorage.setItem('theme', nextTheme);
-    themeToggle.textContent = nextTheme === 'light' ? '☀️' : '🌙';
+    applyTheme(nextTheme);
   });
 });

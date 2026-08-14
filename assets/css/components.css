@@ -28,7 +28,9 @@
   align-items: center;
   justify-content: center;
 }
-.menu-toggle { display: none; }
+.menu-toggle {
+  display: none;
+}
 
 .btn {
   display: inline-flex;
