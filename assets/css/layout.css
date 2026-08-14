@@ -2,13 +2,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(7, 20, 31, 0.72);
-  border-bottom: 1px solid var(--border);
+  background: rgba(7, 20, 31, 0.76);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
 
-body[data-theme="light"] header { background: rgba(255, 255, 255, 0.8); }
+body[data-theme="light"] header { background: rgba(255, 255, 255, 0.82); }
 
 nav {
   display: flex;
@@ -63,7 +63,7 @@ main { padding: 2rem 0 4rem; }
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
   align-items: center;
-  padding: 2rem 0 2.5rem;
+  padding: 3.5rem 0 3rem;
 }
 
 .section { margin-top: 1.2rem; }
